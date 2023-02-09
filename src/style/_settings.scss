@@ -1,0 +1,41 @@
+$dark-green:#5C6E08;
+$light-green:#93AD18;
+
+html {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.d-none {
+    display: none;
+}
+
+.d-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.green-button {
+    background-color: $dark-green;
+    color: white;
+    padding: 10px 50px;
+    border: 1px solid $dark-green;
+    border-radius: 5px;
+    height: 40px;
+    cursor: pointer;
+    text-transform: uppercase;
+}

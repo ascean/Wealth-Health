@@ -1,0 +1,40 @@
+import { v4 as uuid } from 'uuid';
+
+export const EMPLOYEES = [
+    {
+        id:uuid(),
+        lastName: "Johnson",
+        firstName: "Emily",
+        birthDate: "01/01/1995",
+        startDate: "12/01/2005",
+        street: "123 Main St",
+        city: "Los Angeles",
+        state: "California",
+        zipCode: "90210",
+        department: "Sales",
+    },
+    {
+        id:uuid(),
+        lastName: "Williams",
+        firstName: "Michael",
+        birthDate: "05/03/1985",
+        startDate: "31/03/2006",
+        street: "456 Park Ave",
+        city: "New York",
+        state: "Alabama",
+        zipCode: "10019",
+        department: "Marketing",
+    },
+    {
+        id:uuid(),
+        lastName: "Brown",
+        firstName: "Samantha",
+        birthDate: "20/07/1990",
+        startDate: "12/06/2002",
+        street: "789 Elm St",
+        city: "Chicago",
+        state: "Delawaere",
+        zipCode: "60601",
+        department: "Engineering",
+    },
+];

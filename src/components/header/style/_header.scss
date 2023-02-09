@@ -1,0 +1,30 @@
+header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 16px;
+    
+    h1 {
+        color: $dark-green;
+    }
+}
+
+.logo {
+    width: 100px;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        margin: auto 20px;
+
+        & h1 {
+            font-size: 1.4rem;
+        }
+    }
+    .logo {
+        width: 50px;
+    }
+}
