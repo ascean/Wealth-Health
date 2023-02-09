@@ -10,8 +10,8 @@ import { STATES } from "../../assets/datas/states";
 import { DEPARTMENTS } from "../../assets/datas/departements";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faInfoCircle} from "@fortawesome/free-solid-svg-icons";
-import Modal from "../../components/modal/Modal";
 import { addEmployee } from "../../redux/employeeSlice";
+import { Modal } from "asean-react-modal";
 
 const TEXT_REGEX = /^[a-zàâäãçéèêëìïîòôöõùûüñ'-]{2,23}$/i;
 const TEXT_AND_NUMBER_REGEX = /^[0-9a-zàâäãçéèêëìïîòôöõùûüñ'-]{2,23}$/i;
@@ -60,6 +60,10 @@ const NewEmployee = () => {
     const hideModal = () => showModal && setShowModal(false)
 
     const dispatch = useDispatch();
+
+    //exemples for asean-react-modal
+    // const btnStyles = {background:'red', color:'white', borderColor:'green'}
+    // const bgStyles = {background: 'pink'}
 
     useEffect(() => {
         //check firstName
@@ -401,7 +405,8 @@ const NewEmployee = () => {
                 </div>
                 <button className="green-button btn-save">save</button>
             </form>
-            <Modal show={showModal} onClickCloseBtn={hideModal} bEscapeClose={true}>
+            <Modal show={showModal} onClickCloseBtn={hideModal} >
+                {/* bEscapeClose={true} backgroundStyles = {bgStyles} buttonStyles={btnStyles}> */}
                 <h1>Employee successfully created !</h1>
             </Modal>
         </section>
