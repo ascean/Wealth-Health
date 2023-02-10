@@ -1,140 +1,143 @@
 #section-employee {
-    width: 80%;
+  width: 80%;
 }
 #section-list {
-    width: 80%;
+  width: 80%;
 }
-#section-employee, #section-list {
-    border: 2px solid $dark-green;
-    border-radius: 30px;
-    margin: 0 auto;
-    padding: 8px 32px;
+#section-employee,
+#section-list {
+  border: 2px solid $dark-green;
+  border-radius: 30px;
+  margin: 0 auto;
+  padding: 8px 32px;
 
-    .header-employee {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 3px solid $dark-green;
-        margin: 8px;
+  .header-employee {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid $dark-green;
+    margin: 8px 0px;
 
-        h1 {
-            text-align: left;
-            color: $dark-green;
-        }
+    h1 {
+      text-align: left;
+      color: $dark-green;
     }
-    
-    #create-employee {
-        padding: 0px;
-    }
-    
+  }
+
+  #create-employee {
+    padding: 0px;
+  }
+  form {
     input {
-        line-height: 2;
-        padding-left: 10px;
-        width: 96%;
+      line-height: 2;
+      padding-left: 10px;
+      width: 96%;
     }
-    
+
     input,
     .select-field {
-        border: 2px solid $dark-green;
-        border-radius: 5px;
-        font-family: Roboto, Helvetica, Arial, sans-serif;
-        font-size: 16px;
-        text-align: left;
+      border: 1px solid $dark-green;
+      border-radius: 5px;
+      font-family: Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      text-align: left;
     }
     .select-field {
-        width: 100%;
+      width: 100%;
     }
     .one-col {
-        width:100%;
+      width: 100%;
 
-        & input {
-            width: 98%;
-        }
+      & input {
+        width: 98%;
+      }
     }
     .two-col {
+      display: flex;
+      justify-content: space-between;
+      gap: 32px;
+
+      .col {
+        width: 48%;
         display: flex;
-        justify-content: space-between;
-        gap: 32px;
-        
-        .col {
-            width: 48%;
-            display: flex;
-            flex-direction: column;
-        }
+        flex-direction: column;
+      }
     }
 
     label {
-        display: block;
-        margin-top: 0.5rem;
-        width: 100%;
-        color: $dark-green;
-        text-align: left;
-        line-height: 2;
-        font-size:14px
+      display: block;
+      margin-top: 0.5rem;
+      width: 100%;
+      color: $dark-green;
+      text-align: left;
+      line-height: 2;
+      font-size: 14px;
     }
-    
+
     .address {
-        margin-top: 10px;
+      margin-top: 10px;
     }
-    
+
     .instructions {
-        font-size: 0.75em;
-        border-radius: 2px;
-        color: crimson;
-        padding: 0.25em;
-        position: relative;
-        margin-top: 1px;
-        margin-bottom: 0px;
-        text-align: left;
+      font-size: 0.75em;
+      border-radius: 2px;
+      color: crimson;
+      padding: 0.25em;
+      position: relative;
+      margin-top: 1px;
+      margin-bottom: 0px;
+      text-align: left;
     }
-    
-    .instructions>svg {
-        margin-right: 0.25em;
+
+    .instructions > svg {
+      margin-right: 0.25em;
     }
-    
+
     .offscreen {
-        position: absolute;
-        left: -9999px;
+      position: absolute;
+      left: -9999px;
     }
-    
+
     .react-datepicker-wrapper {
-        width: auto;
+      width: auto;
     }
-    .btn-save{
-        margin-top: 20px;
+    .btn-save {
+      margin-top: 20px;
     }
 
     .hide {
-        display: none;
+      display: none;
     }
-    
-    .valid, .invalid {
-        color: $light-green;
-        margin-left: 0.25em;
+
+    .valid,
+    .invalid {
+      color: $light-green;
+      margin-left: 0.25em;
     }
+  }
 }
 
 .green-button {
-    width: 150px;
-    padding: 0;
-    font-size: 12px;
+  width: 150px;
+  padding: 0;
+  font-size: 12px;
 }
 
 @media screen and (max-width: 768px) {
-    #section-employee {
-        .header-employee {
-            flex-direction: column-reverse;
-            & h1 {
-                text-align: center;
-                font-size: 1.2rem;
-            }
-        }
-        .two-col {
-            flex-direction: column;
-            gap: 0;
-            .col {
-                width: 100%;
-            }
-        }
+  #section-employee {
+    .header-employee {
+      flex-direction: column-reverse;
+      & h1 {
+        text-align: center;
+        font-size: 1.2rem;
+      }
     }
+    .two-col {
+      flex-direction: column;
+      gap: 0;
+      .col {
+        width: 100%;
+      }
+    }
+  }
 }

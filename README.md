@@ -1,46 +1,90 @@
-# Getting Started with Create React App and Redux
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Wealth Health
 
-## Available Scripts
+## General informations
 
-In the project directory, you can run:
+Ce projet est une mise à niveau d'une application web interne appelée HRNet qui gère les dossiers des employés. Cette version utilise React (au lieu de JQuery auparavant).
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Create a new employee
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- control that fields are filled before submit and display error messages if not
+- control that fields respect the right format and display error messages if not
+- display a modal to inform user that employee has been successfully created
 
-### `npm test`
+### Employees list
+- a list of employees is shown in an array
+- list can be sorted
+- list can be filtered
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+HRNet permet de créer les employés puis de consulter leur liste. Elle propose également des plugins provenant de librairies existantes et un plugin créé spécifiquement pourcette version : le plugin de la modale.
 
-### `npm run build`
+## Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- nodeJS (version 16.14.2)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- npm (version 8.5.0)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Visual Studio Code (version 1.73.1) or another code editor
 
-### `npm run eject`
+- git
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Technologies and Dependencies
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Javascript
+- [react] (version 18.2.0)
+- [react-dom] (version 18.2.0)
+- [react-redux] (version 8.0.5)
+- [react-router-dom] (version 6.8.0)
+- [react-data-table-component] (version 7.5.3)
+- [react-datepicker] (version 4.10.0)
+- [react-scripts] 5.0.1)
+- [react-select] (version 5.7.0)
+- [uuid] (version 9.0.0)
+- [uuidv4] (version 6.2.13)
+- [sass] (version 1.57.1)
+- [styled-components] (version 5.3.6)
+- [@fortawesome/free-solid-svg-icons] (version 6.2.1)
+- [@fortawesome/react-fontawesome] (version 0.2.0)
+- [asean-react-modal] (version 0.5.0)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Installation 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Clone this project
 
-## Learn More
+```bash
+  git clone https://github.com/ascean/wealth-health.git
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Go to the project directory
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+  cd wealthhealth
+```
+
+- Install dependencies
+
+```bash
+  npm install
+```
+
+## Launch the project
+
+```bash
+  npm run start
+```
+
+Finally, open http://localhost:3000 to view the application in your browser. (3000 is your port number)
+
+## Datas
+
+Some datas already exist that you can modify :
+- employees in 'src/assets/datas/employeesDatas.js'
+- departments in 'src/assets/datas/departments.js'
+- states in 'src/assets/datas/departments.js'
+
+## Author
+
+- Sandrine
+

@@ -1,28 +1,7 @@
 #section-list {
     width: 80%;
 }
-.list-container {
-    margin: 20px auto;
-    position: relative;
 
-    & header {
-        display: flex;
-        justify-content: flex-start;
-        padding-left: 0;
-        
-        & #search {
-            width: 30%;
-            border-right: 0;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-            height: 30px;
-        }
-        & .green-button {
-            width:40px;
-            margin-left: -3px;
-        }
-    }
-}
 
 .button-container {
     display: flex;

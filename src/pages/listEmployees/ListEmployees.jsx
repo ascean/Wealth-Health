@@ -2,7 +2,7 @@ import React, { useMemo, useState } from "react";
 import DataTable from "react-data-table-component";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import FilterComponent from "./Filter";
+import FilterComponent from "../../components/filter/Filter";
 
 const columns = [
     {
@@ -59,6 +59,10 @@ const paginationComponentOptions = {
     selectAllRowsItemText: "Tous",
 };
 
+/**
+ * Page to display a list of all employees
+ * @returns {ReactElement} Create ListEmployees page
+ */
 const Listemployees = () => {
     const employees = useSelector((state) => state.employee);
 
@@ -109,8 +113,6 @@ const Listemployees = () => {
                     </Link>
             </div>
             <div className="list-container">
-                <div className="button-container">
-                </div>
                 <DataTable
                     columns={columns}
                     data={filteredItems}

@@ -1,5 +1,9 @@
 import React from 'react';
 
+/**
+ * Component for header page
+ * @returns {ReactElement} Create Header component
+ */
 const Header = () => {
     return (
         <header className='header'>

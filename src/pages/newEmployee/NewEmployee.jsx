@@ -15,8 +15,12 @@ import { Modal } from "asean-react-modal";
 
 const TEXT_REGEX = /^[a-zàâäãçéèêëìïîòôöõùûüñ'-]{2,23}$/i;
 const TEXT_AND_NUMBER_REGEX = /^[0-9a-zàâäãçéèêëìïîòôöõùûüñ'-]{2,23}$/i;
-const NUMBER_REGEX = /^[0-9]{5}$/i;
+const NUMBER_REGEX = /^[0-9]{3}$/i;
 
+/**
+ * Page to create a new employee
+ * @returns {ReactElement} Create NewEmployee page
+ */
 const NewEmployee = () => {
 
     const [credentials, setCredentials] = useState({
@@ -33,7 +37,6 @@ const NewEmployee = () => {
     const [startDate, setStartDate] = useState("")
     const [department, setDepartment] = useState(null)
     const [state, setState] = useState(null)
-
 
     const [validFirstName, setValidFirstName] = useState(false);
     const [validLastName, setValidLastName] = useState(false);
@@ -58,12 +61,11 @@ const NewEmployee = () => {
     //asean-react-modal
     const [showModal, setShowModal] = useState(false)
     const hideModal = () => showModal && setShowModal(false)
-
-    const dispatch = useDispatch();
-
-    //exemples for asean-react-modal
+    //exemples for asean-react-modal style options
     // const btnStyles = {background:'red', color:'white', borderColor:'green'}
     // const bgStyles = {background: 'pink'}
+
+    const dispatch = useDispatch();
 
     useEffect(() => {
         //check firstName
@@ -112,7 +114,7 @@ const NewEmployee = () => {
     }, [state]);
 
     /**
-     * reset fields after valid submit
+     * reset fields after a valid submit
      */
     const resetFields = () => {
         setCredentials({
@@ -129,7 +131,7 @@ const NewEmployee = () => {
     }
 
     /**
-     * reset states after valid submit
+     * reset states after a valid submit
      */
     const resetStates = () => {
         setValidFirstName(false)
@@ -184,10 +186,11 @@ const NewEmployee = () => {
         dispatch(addEmployee(fields));
         resetFields()
         resetStates();
+        setFirst(true)
+        
         //asean-react-modal
         setShowModal(true)
 
-        setFirst(true)
 
     };
     return (

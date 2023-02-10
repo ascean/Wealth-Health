@@ -11,7 +11,7 @@ const FilterComponent = ({ filterText, onFilter, onClear }) => (
             value={filterText}
             onChange={onFilter}
         />
-        <button className = 'green-button filter-button' type="button" onClick={onClear}>
+        <button className = 'filter-button' type="button" onClick={onClear}>
             X
         </button>
     </>
