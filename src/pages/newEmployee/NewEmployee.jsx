@@ -13,9 +13,9 @@ import {faInfoCircle} from "@fortawesome/free-solid-svg-icons";
 import { addEmployee } from "../../redux/employeeSlice";
 import { Modal } from "asean-react-modal";
 
-const TEXT_REGEX = /^[a-zàâäãçéèêëìïîòôöõùûüñ'-]{2,23}$/i;
-const TEXT_AND_NUMBER_REGEX = /^[0-9a-zàâäãçéèêëìïîòôöõùûüñ'-]{2,23}$/i;
-const NUMBER_REGEX = /^[0-9]{3}$/i;
+const TEXT_REGEX = /^[a-z àâäãçéèêëìïîòôöõùûüñ'-]{2,23}$/i;
+const TEXT_AND_NUMBER_REGEX = /^[0-9a-z àâäãçéèêëìïîòôöõùûüñ'-]{2,}$/i;
+const NUMBER_REGEX = /^[0-9]{3,}$/;
 
 /**
  * Page to create a new employee
@@ -53,7 +53,7 @@ const NewEmployee = () => {
 
     const errMsg = {
         inputTextErrMsg: "Must contain 2 letters or more",
-        inputNumberErrMsg: "Must contain 5 numbers",
+        inputNumberErrMsg: "Must contain 3 numbers or more",
         inputDateErrMsg: "A date have be choosen",
         inputSelectErrMsg: "An item have to be selected"
     }
@@ -369,10 +369,12 @@ const NewEmployee = () => {
                         <Select
                             id="state"
                             value={state}
+                            name="state"
                             className="select-field"
                             options={STATES}
                             onChange={setState}
                             aria-describedby="statemsg"
+                            placeholder="Select a state..."
                         />
                         {!first && !validState
                             ? (
@@ -391,10 +393,12 @@ const NewEmployee = () => {
                     <Select
                         id="department"
                         value={department}
+                        name="department"
                         className="select-field"
                         options={DEPARTMENTS}
                         onChange={setDepartment}
                         aria-describedby="departmentmsg"
+                        placeholder="Select a department..."
                     />
                     {!first && !validDepartment
                             ? (

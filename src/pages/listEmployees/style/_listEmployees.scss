@@ -18,23 +18,4 @@
         margin: 20px auto;
         position: relative;
     }
-
-    .list-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        
-        & header {
-            width: 100%;
-            margin: 0;            
-            & #search {
-                width: 86%;
-                margin: 0;
-            }
-            & .green-button {
-                width: 10%;
-                margin: 0;
-            }
-        }
-    }
 }

@@ -124,7 +124,10 @@
 }
 
 @media screen and (max-width: 768px) {
-  #section-employee {
+  #section-employee, #section-list {
+    border: none;
+    padding-left: 0px;
+    padding-right: 0px;
     .header-employee {
       flex-direction: column-reverse;
       & h1 {
@@ -132,11 +135,14 @@
         font-size: 1.2rem;
       }
     }
-    .two-col {
-      flex-direction: column;
-      gap: 0;
-      .col {
-        width: 100%;
+    form {
+
+      .two-col {
+        flex-direction: column;
+        gap: 0;
+        .col {
+          width: 100%;
+        }
       }
     }
   }
