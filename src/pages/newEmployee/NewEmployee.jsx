@@ -196,7 +196,7 @@ const NewEmployee = () => {
     return (
         <section id="section-employee">
 
-            <div className="header-employee">
+            <div className="section-header">
                 <h1>Create Employee</h1>
                 <Link to="/list">
                     <button type="button" className="green-button nav-item">
@@ -205,9 +205,9 @@ const NewEmployee = () => {
                 </Link>
             </div>
 
-            <form id="create-employee" onSubmit={handleSubmit}>
+            <form id="form-create-employee" onSubmit={handleSubmit}>
                 <div className="two-col">
-                    <div className="col">
+                    <div className="col col1">
                         <label htmlFor="firstName">First name</label>
                         <input
                             type="text"
@@ -229,7 +229,7 @@ const NewEmployee = () => {
                         }
                     </div>
 
-                    <div className="col">
+                    <div className="col col2">
                         <label htmlFor="lastName">Last name</label>
                         <input
                             type="text"
@@ -252,7 +252,7 @@ const NewEmployee = () => {
                     </div>
                 </div>
                 <div className="two-col">
-                    <div className="col">
+                    <div className="col col1">
                         <label htmlFor="birthDate">Date of Birth</label>
                         <DatePicker
                             id="birthDate"
@@ -274,7 +274,7 @@ const NewEmployee = () => {
                         }
 
                     </div>
-                    <div className="col">
+                    <div className="col col2">
                         <label htmlFor="startDate">Start date</label>
                         <DatePicker
                             id="startDate"
@@ -319,7 +319,7 @@ const NewEmployee = () => {
                     }
                 </div>
                 <div className="two-col">
-                    <div className="col">
+                    <div className="col col1">
                         <label htmlFor="zipCode">Zip Code</label>
                         <input
                             type="text"
@@ -341,7 +341,7 @@ const NewEmployee = () => {
                         }
                     </div>
 
-                    <div className="col">
+                    <div className="col col2">
                         <label htmlFor="city">City</label>
                         <input
                             type="text"
@@ -364,7 +364,7 @@ const NewEmployee = () => {
                     </div>
                 </div>
                 <div className="two-col">
-                    <div className="col">
+                    <div className="col col1">
                         <label htmlFor="state">State</label>
                         <Select
                             id="state"
@@ -410,7 +410,9 @@ const NewEmployee = () => {
                             : ("")
                         }
                 </div>
-                <button className="green-button btn-save">save</button>
+                <div className="btn-container">
+                    <button className="green-button btn-save">save</button>
+                </div>
             </form>
             <Modal show={showModal} onClickCloseBtn={hideModal} >
                 {/* bEscapeClose={true} backgroundStyles = {bgStyles} buttonStyles={btnStyles}> */}

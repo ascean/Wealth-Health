@@ -1,39 +1,7 @@
-#section-employee {
-  width: 80%;
-}
-#section-list {
-  width: 80%;
-}
-#section-employee,
-#section-list {
-  border: 2px solid $dark-green;
-  border-radius: 30px;
-  margin: 0 auto;
-  padding: 8px 32px;
-
-  .header-employee {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 3px solid $dark-green;
-    margin: 8px 0px;
-
-    h1 {
-      text-align: left;
-      color: $dark-green;
-    }
-  }
-
-  #create-employee {
-    padding: 0px;
-  }
   form {
-    input {
-      line-height: 2;
-      padding-left: 10px;
-      width: 96%;
-    }
+    padding: 0px;
 
+    
     input,
     .select-field {
       border: 1px solid $dark-green;
@@ -42,28 +10,43 @@
       font-size: 16px;
       text-align: left;
     }
+
+    input {
+      line-height: 2;
+      padding-left: 10px;
+    }
+    
     .select-field {
       width: 100%;
     }
+    
     .one-col {
-      width: 100%;
-
-      & input {
-        width: 98%;
+      width:100%;
+      
+      input {
+        width: 98.5%;
       }
     }
     .two-col {
       display: flex;
       justify-content: space-between;
-      gap: 32px;
-
+      gap: 38px;
+      input{
+        width: 97%;
+      }
+      
       .col {
-        width: 48%;
         display: flex;
         flex-direction: column;
       }
+      .col1 {
+        width: 47%;
+      }
+      .col2 {
+        width: 47%;
+      }
     }
-
+    
     label {
       display: block;
       margin-top: 0.5rem;
@@ -72,10 +55,6 @@
       text-align: left;
       line-height: 2;
       font-size: 14px;
-    }
-
-    .address {
-      margin-top: 10px;
     }
 
     .instructions {
@@ -93,50 +72,22 @@
       margin-right: 0.25em;
     }
 
-    .offscreen {
-      position: absolute;
-      left: -9999px;
-    }
-
     .react-datepicker-wrapper {
       width: auto;
     }
-    .btn-save {
+    .btn-container {
       margin-top: 20px;
     }
 
-    .hide {
-      display: none;
-    }
-
-    .valid,
-    .invalid {
-      color: $light-green;
-      margin-left: 0.25em;
-    }
   }
-}
-
-.green-button {
-  width: 150px;
-  padding: 0;
-  font-size: 12px;
-}
 
 @media screen and (max-width: 768px) {
-  #section-employee, #section-list {
-    border: none;
-    padding-left: 0px;
-    padding-right: 0px;
-    .header-employee {
-      flex-direction: column-reverse;
-      & h1 {
-        text-align: center;
-        font-size: 1.2rem;
-      }
-    }
     form {
-
+      .one-col {
+        input {
+          width: 97.5%;
+        }
+      }
       .two-col {
         flex-direction: column;
         gap: 0;
@@ -145,5 +96,4 @@
         }
       }
     }
-  }
 }

@@ -104,7 +104,7 @@ const Listemployees = () => {
     return (
             <section id="section-list">
 
-            <div className="header-employee">
+            <div className="section-header">
                 <h1>List Employees</h1>
                     <Link to="/">
                         <button type="button" className="green-button nav-item">
