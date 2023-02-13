@@ -1,6 +1,4 @@
 .list-container {
-    margin: 20px auto;
-    position: relative;
     
     & header {
         display: flex;
@@ -42,13 +40,12 @@
         align-items: center;
         justify-content: center;
         margin-left: -2px;
+        cursor: pointer;
 };
+
 @media screen and (max-width: 768px) {
 
     .list-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
         
         & header {
             width: 100%;

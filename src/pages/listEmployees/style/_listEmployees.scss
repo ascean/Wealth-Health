@@ -1,0 +1,13 @@
+.list-container {
+    margin: 20px auto;
+    position: relative;
+}
+
+@media screen and (max-width: 768px) {
+
+    .list-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
