@@ -3,7 +3,7 @@
 
 ## General informations
 
-Ce projet est une mise à niveau d'une application web interne appelée HRNet qui gère les dossiers des employés. Cette version utilise React (au lieu de JQuery auparavant).
+This project is an upgrade of an internal web application called HRNet that manages employee records. This version uses React (instead of JQuery previously).
 
 ## Features
 
