@@ -18,7 +18,7 @@ This project is an upgrade of an internal web application called HRNet that mana
 - list can be sorted
 - list can be filtered
 
-HRNet permet de créer les employés puis de consulter leur liste. Elle propose également des plugins provenant de librairies existantes et un plugin créé spécifiquement pourcette version : le plugin de la modale.
+HRNet allows you to create employees and then consult their list. It also offers plugins from existing libraries and a plugin created specifically for this version: the modal plugin.
 
 ## Prerequisites
 
